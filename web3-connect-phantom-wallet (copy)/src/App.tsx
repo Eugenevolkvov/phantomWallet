@@ -92,9 +92,9 @@ function App() {
 	return (
 		<div className="App">
 			<h2 style={{ color: "#666666" }}>
-				{provider && !walletKey ? "Not connected" : `Connected, ${walletKey}`}
+				{!walletKey ? "Not connected" : `Connected, ${walletKey}`}
 			</h2>
-			{provider && !walletKey ? (
+			{!walletKey ? (
 				<button className="App-button" onClick={connectWallet}>
 					Connect
 				</button>
